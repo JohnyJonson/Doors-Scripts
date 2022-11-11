@@ -63,4 +63,4 @@ shadow.Unequipped:Connect(function()
 end)
 	end,
 })
-Rayfield:LoadConfiguration()
+
