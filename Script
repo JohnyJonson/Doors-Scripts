@@ -1,0 +1,26 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()#
+local Window = OrionLib:MakeWindow({Name = "Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Speed",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+Tab:AddSlider({
+	Name = "Speed",
+	Min = 0,
+	Max = 20,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer:WaitForChild("Humanoid").WalkSpeed = Value
+	end    
+})
+
