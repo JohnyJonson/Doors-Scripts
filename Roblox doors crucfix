@@ -1,5 +1,4 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-local Tab = Window:CreateTab("Crucifix", 4483362458) -- Title, Image
 local Window = Rayfield:CreateWindow({
 	Name = "Main",
 	LoadingTitle = "Doors",
@@ -25,6 +24,8 @@ local Window = Rayfield:CreateWindow({
 		Key = "Hello"
 	}
 })
+local Tab = Window:CreateTab("Crucifix", 4483362458) -- Title, Image
+
 local Button = Tab:CreateButton({
 	Name = "Give Crucifix",
 	Callback = function()
